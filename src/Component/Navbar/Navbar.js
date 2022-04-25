@@ -5,7 +5,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   return (
     <div className="bg-blue-600 p-3 text-white">
-      <div class="flex">
+      <div className="flex">
         {/* menu button for small device */}
         <div
           onClick={() => setOpen(!open)}
@@ -14,7 +14,7 @@ const Navbar = () => {
           {open ? <XIcon> </XIcon> : <MenuIcon></MenuIcon>}
         </div>
         {/* bracu Logo */}
-        <div class="flex-none my-auto">
+        <div className="flex-none my-auto">
           <img
             className="rounded-full p-1 ml-3 flex-none w-14  bg-white"
             src="bracu-logo.png"
@@ -51,7 +51,7 @@ const Navbar = () => {
           </ul>
         </div>
         {/* User Account Info */}
-        <div class="flex-none my-auto ml-auto">
+        <div className="flex-none my-auto ml-auto">
           <div className="flex my-auto">
             <svg
               xmlns="http://www.w3.org/2000/svg"
