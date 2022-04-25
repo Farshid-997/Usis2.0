@@ -1,12 +1,11 @@
-import React from 'react';
-import CourseDescription from '../CourseDescription/CourseDescription';
+import React from "react";
 
 const Home = () => {
-    return (
-        <div>
-            <CourseDescription></CourseDescription>
-        </div>
-    );
+  return (
+    <div>
+      <h1> This is Home </h1>
+    </div>
+  );
 };
 
 export default Home;

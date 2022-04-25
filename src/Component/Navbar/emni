@@ -1,0 +1,46 @@
+import React, { useState } from "react";
+import { MenuIcon, XIcon } from "@heroicons/react/solid";
+
+const Navbar = () => {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div className="flex bg-blue-600 items-center">
+      <div
+        onClick={() => setOpen(!open)}
+        className="w-8 cursor-pointer h-8 md:hidden"
+      >
+        {open ? <XIcon> </XIcon> : <MenuIcon></MenuIcon>}
+      </div>
+      <div className="">
+        <img
+          className="w-14 bg-white rounded-full p-1 "
+          src="bracu-logo.png"
+          alt=""
+        />
+        <ul
+          className={` bg-red-400 lg:divide-x-2 md:static absolute duration-500 ease-in ${
+            open
+              ? "top-20 w-3/4 rounded-2xl bg-blue-600 text-white"
+              : "top-[-200px]"
+          }`}
+        >
+          <li className="my-auto hover:text-orange-400 cursor-pointer">
+            <a href="/"></a>Home
+          </li>
+          <li className="my-auto hover:text-orange-400 cursor-pointer">
+            <a href="/add-course"></a>Add course
+          </li>
+          <li className="my-auto hover:text-orange-400 cursor-pointer">
+            <a href="/"></a>Set Equivalent / Pre-requisites courses
+          </li>
+          <li className="my-auto hover:text-orange-400 cursor-pointer">
+            <a href="/add-course"></a>Set Curriculum
+          </li>
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+export default Navbar;
