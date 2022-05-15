@@ -1,13 +1,23 @@
 import { data } from "autoprefixer";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import CourseCard from "../CourseCard/CourseCard";
 
 const Home = () => {
-  fetch("https://degree-application-processing.herokuapp.com")
-    .then((response) => response.json())
-    .then((data) => console.log(data));
+  const [results, setResults] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:3001/")
+      // fetch("https://degree-application-processing.herokuapp.com/")
+      .then((response) => response.json())
+      .then((data) => setResults(data));
+  }, []);
+
+  // console.log(results);
+
   return (
-    <div>
-      <h1>{data} </h1>
+    <div className="lg:grid lg:grid-cols-4 text-center my-3">
+      {results.map((items) => (
+        <CourseCard key={items.Course_ID} items={items}></CourseCard>
+      ))}
     </div>
   );
 };

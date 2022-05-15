@@ -7,21 +7,24 @@ import CourseSettings from "./Component/CourseSettings/CourseSettings";
 import SetCurriculumn from "./Component/SetCurriculumn/SetCurriculumn";
 
 function App() {
+  // fetch("https://degree-application-processing.herokuapp.com/")
+  //   .then((response) => response.json())
+  //   .then((data) => console.log(data));
   return (
     <div className="App">
-      <Navbar> </Navbar>
+      <Navbar> </Navbar>{" "}
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/add-course" element={<AddCourse></AddCourse>} />
+        <Route path="/" element={<Home />} />{" "}
+        <Route path="/add-course" element={<AddCourse> </AddCourse>} />
         <Route
           path="/course-settings"
-          element={<CourseSettings></CourseSettings>}
+          element={<CourseSettings> </CourseSettings>}
         />
         <Route
           path="/set-curriculumn"
-          element={<SetCurriculumn></SetCurriculumn>}
+          element={<SetCurriculumn> </SetCurriculumn>}
         />
-      </Routes>
+      </Routes>{" "}
     </div>
   );
 }

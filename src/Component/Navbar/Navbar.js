@@ -4,7 +4,7 @@ import { MenuIcon, XIcon } from "@heroicons/react/solid";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   return (
-    <div className="bg-blue-600 p-3 text-white">
+    <div className="bg-blue-500 p-3 text-white">
       <div className="flex">
         {/* menu button for small device */}
         <div
